@@ -196,7 +196,7 @@ h3{
     padding: 60px 0;
 }
 .blog-left{
-    flex-basis: 65%;
+    flex-basis: 60%;
 }
 .blog-left img{
     width: 100%;
@@ -254,7 +254,7 @@ h3{
     font-weight: 500;
 }
 .blog-right{
-    flex-basis: 32%;
+    flex-basis: 30%;
 }
 .blog-right h3{
     background: #2e94e3;
@@ -1062,6 +1062,14 @@ h3 {
 .kegiatan-3 .rules-list li { 
     padding: 5px 0; 
     border-bottom: 1px solid #ddd; 
+}
+.pembahasan{
+    display: none;
+    background-color: #e6f7ff;
+    border-left: 5px solid #1e90ff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 @media (max-width: 700px) {
     .text-box h1 {
