@@ -130,6 +130,121 @@ function checkDropdownAnswer() {
         result.style.color = "red";
     }
 }
+function checkDropdownAnswer21() {
+    const correctAnswers = ["21", "32", "13", "14", "15", "16"];
+    const selects = document.querySelectorAll(".question .drop-down1");
+    let score = 0;
+
+    selects.forEach((select, index) => {
+        if (select.value === correctAnswers[index]) {
+            score++;
+            select.style.border = "2px solid green";
+        } else {
+            select.style.border = "2px solid red";
+        }
+    });
+
+    const resultdr21 = document.getElementById("dropdown-result21");
+    if (score === correctAnswers.length) {
+        resultdr21.innerHTML = "🎉 Jawabanmu benar semua! Hebat! 🎯";
+        resultdr21.style.color = "green";
+    } else {
+        resultdr21.innerHTML = `Kamu benar ${score} dari ${correctAnswers.length} jawaban. Coba periksa lagi ya! 😊`;
+        resultdr21.style.color = "orange";
+    }
+}
+function checkDropdownAnswer22() {
+    const correctAnswers = ["41", "32", "23", "14", "25", "36"];
+    const selects = document.querySelectorAll(".question .drop-down2");
+    let score = 0;
+
+    selects.forEach((select, index) => {
+        if (select.value === correctAnswers[index]) {
+            score++;
+            select.style.border = "2px solid green";
+        } else {
+            select.style.border = "2px solid red";
+        }
+    });
+
+    const resultdr21 = document.getElementById("dropdown-result22");
+    if (score === correctAnswers.length) {
+        resultdr21.innerHTML = "🎉 Jawabanmu benar semua! Hebat! 🎯";
+        resultdr21.style.color = "green";
+    } else {
+        resultdr21.innerHTML = `Kamu benar ${score} dari ${correctAnswers.length} jawaban. Coba periksa lagi ya! 😊`;
+        resultdr21.style.color = "orange";
+    }
+}
+function checkDropdownAnswer23() {
+    const correctAnswers = ["41", "12", "13", "14", "35", "16"];
+    const selects = document.querySelectorAll(".question .drop-down3");
+    let score = 0;
+
+    selects.forEach((select, index) => {
+        if (select.value === correctAnswers[index]) {
+            score++;
+            select.style.border = "2px solid green";
+        } else {
+            select.style.border = "2px solid red";
+        }
+    });
+
+    const resultdr21 = document.getElementById("dropdown-result23");
+    if (score === correctAnswers.length) {
+        resultdr21.innerHTML = "🎉 Jawabanmu benar semua! Hebat! 🎯";
+        resultdr21.style.color = "green";
+    } else {
+        resultdr21.innerHTML = `Kamu benar ${score} dari ${correctAnswers.length} jawaban. Coba periksa lagi ya! 😊`;
+        resultdr21.style.color = "orange";
+    }
+}
+function checkDropdownAnswer24() {
+    const correctAnswers = ["41", "32", "13", "44", "25", "36", "37"];
+    const selects = document.querySelectorAll(".question .drop-down4");
+    let score = 0;
+
+    selects.forEach((select, index) => {
+        if (select.value === correctAnswers[index]) {
+            score++;
+            select.style.border = "2px solid green";
+        } else {
+            select.style.border = "2px solid red";
+        }
+    });
+
+    const resultdr21 = document.getElementById("dropdown-result24");
+    if (score === correctAnswers.length) {
+        resultdr21.innerHTML = "🎉 Jawabanmu benar semua! Hebat! 🎯";
+        resultdr21.style.color = "green";
+    } else {
+        resultdr21.innerHTML = `Kamu benar ${score} dari ${correctAnswers.length} jawaban. Coba periksa lagi ya! 😊`;
+        resultdr21.style.color = "orange";
+    }
+}
+function checkDropdownAnswer25() {
+    const correctAnswers = ["21", "22", "23"];
+    const selects = document.querySelectorAll(".question .drop-down5");
+    let score = 0;
+
+    selects.forEach((select, index) => {
+        if (select.value === correctAnswers[index]) {
+            score++;
+            select.style.border = "2px solid green";
+        } else {
+            select.style.border = "2px solid red";
+        }
+    });
+
+    const resultdr21 = document.getElementById("dropdown-result25");
+    if (score === correctAnswers.length) {
+        resultdr21.innerHTML = "🎉 Jawabanmu benar semua! Hebat! 🎯";
+        resultdr21.style.color = "green";
+    } else {
+        resultdr21.innerHTML = `Kamu benar ${score} dari ${correctAnswers.length} jawaban. Coba periksa lagi ya! 😊`;
+        resultdr21.style.color = "orange";
+    }
+}
 function checkAnswersE() {
     const correctAnswers = ["O(0, 0)", "(x,y)", "sisi samping", "sisi depan", "sisi miring"];
     const selects = document.querySelectorAll(".wrapper-activity select");
@@ -297,6 +412,29 @@ function downloadAnswers() {
     const blob = new Blob([content], { type: 'text/plain' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'jawaban.txt';
+    link.download = 'jawaban kegiatan 1.txt';
     link.click();
 }
+function downloadAnswers2() {
+    const answers = document.querySelectorAll('.answer-box');
+    const dropdowns = document.querySelectorAll('select');
+    let content = "Jawaban Kegiatan Trigonometri:\n\n";
+
+    // Mengambil jawaban dari input teks
+    answers.forEach((answer, index) => {
+        content += `Pertanyaan ${index + 1}: ${answer.value}\n`;
+    });
+
+    // Mengambil jawaban dari dropdown
+    dropdowns.forEach((dropdown, index) => {
+        const selectedOption = dropdown.options[dropdown.selectedIndex].text;
+        content += `Dropdown ${index + 1}: ${selectedOption}\n`;
+    });
+
+    const blob = new Blob([content], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'jawaban kegiatan 2.txt';
+    link.click();
+}
+
