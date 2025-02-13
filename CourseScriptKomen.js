@@ -223,7 +223,7 @@ function checkDropdownAnswer24() {
     }
 }
 function checkDropdownAnswer25() {
-    const correctAnswers = ["21", "22", "23"];
+    const correctAnswers = ["11", "12", "13"];
     const selects = document.querySelectorAll(".question .drop-down5");
     let score = 0;
 
@@ -438,3 +438,8 @@ function downloadAnswers2() {
     link.click();
 }
 
+function periksaJawaban() {
+    document.querySelectorAll('.pembahasan').forEach(el => {
+        el.style.display = 'block';
+    });
+}
