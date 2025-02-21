@@ -1142,6 +1142,9 @@ h3 {
         width: 100%;
         position: relative;
     }
+    .navb ul li[data-intro] {
+        display: none;
+    }
     nav {
         background: rgb(1, 1, 43);
         display: flex;

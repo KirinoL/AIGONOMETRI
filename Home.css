@@ -294,6 +294,9 @@ hr {
         margin-left: 2px;
         line-height: 40px;
     }
+    li[data-intro] {
+        display: none;
+    }
     .text-box{
         width: 90%;
         top: 40%;

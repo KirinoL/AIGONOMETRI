@@ -443,3 +443,16 @@ function periksaJawaban() {
         el.style.display = 'block';
     });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll(".navb ul li[data-intro]").forEach(el => el.remove());
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll(".navb ul li[data-intro]").forEach(el => {
+            el.removeAttribute("data-intro");
+        });
+    }
+});

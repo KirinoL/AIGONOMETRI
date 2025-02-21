@@ -31,3 +31,16 @@ function bukuTamu(){
     strtcaption.style.display = "inline-block";
     wlcm.style.display = "none";
 }
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll("li[data-intro]").forEach(el => el.remove());
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll("li[data-intro]").forEach(el => {
+            el.removeAttribute("data-intro");
+        });
+    }
+});
